@@ -1,9 +1,9 @@
 public class King extends Piece
 {
 
-    public King(PieceColor color)
+    public King(int color)
     {
-        super(color);
+        super(color, Board.KING);
     }
     
 }

@@ -1,8 +1,8 @@
 public class Knight extends Piece
 {
-    public Knight(PieceColor color)
+    public Knight(int color)
     {
-        super(color);
+        super(color, Board.KNIGHT);
     }
     
 }

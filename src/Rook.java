@@ -1,9 +1,9 @@
 public class Rook extends Piece
 {
 
-    public Rook(PieceColor color)
+    public Rook(int color)
     {
-        super(color);
+        super(color, Board.ROOK);
     }
     
 }

@@ -1,8 +1,8 @@
 public class Bishop extends Piece
 {
-    public Bishop(PieceColor color)
+    public Bishop(int color)
     {
-        super(color);
+        super(color, Board.BISHOP);
     }
     
 }

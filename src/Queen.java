@@ -1,8 +1,8 @@
 public class Queen extends Piece
 {
-    public Queen(PieceColor color)
+    public Queen(int color)
     {
-        super(color);
+        super(color, Board.QUEEN);
     }
     
 }

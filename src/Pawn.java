@@ -1,7 +1,7 @@
 public class Pawn extends Piece
 {
-    public Pawn(PieceColor color)
+    public Pawn(int color)
     {
-        super(color);
+        super(color, Board.PAWN);
     }
 }

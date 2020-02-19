@@ -4,8 +4,20 @@ public class Board
     public static void main(String[] args)
     {
         Board x = new Board();
+        System.out.println()
 
     }
+
+    public static final int  WHITE = 1;
+    public static final int BLACK = 2;
+
+    public static final int  NONE = 0;
+    public static final int  PAWN = 1;
+    public static final int  ROOK = 2;
+    public static final int  KNIGHT = 3;
+    public static final int  BISHOP = 4;
+    public static final int  QUEEN = 5;
+    public static final int  KING = 6;
 
     Spot[][] board;
 
@@ -25,15 +37,28 @@ public class Board
         return this.board[row][col];
     }
 
+    @Override
+    public String toString()
+    {
+        String strBoard = "";
+        for (int row = 0; row < board.length; row++)
+        {
+            for (int col = 0; col < board[row].length; col++)
+            {
+                
+            }
+        }
+    }
+
     private void setBoard()
     {
         // Black
-        this.setPieces(0, 1, Piece.PieceColor.BLACK);
+        this.setPieces(0, 1, BLACK);
         // White
-        this.setPieces(7, 6, Piece.PieceColor.WHITE);
+        this.setPieces(7, 6, WHITE);
     }
 
-    private void setPieces(int firstRow, int secondRow, Piece.PieceColor color)
+    private void setPieces(int firstRow, int secondRow, int color)
     {
         this.board[firstRow][0] = new Spot(firstRow, 0, new Rook(color));
         this.board[firstRow][1] = new Spot(firstRow, 1, new Knight(color));
@@ -51,7 +76,6 @@ public class Board
         this.board[secondRow][5] = new Spot(secondRow, 5, new Pawn(color));
         this.board[secondRow][6] = new Spot(secondRow, 6, new Pawn(color));
         this.board[secondRow][7] = new Spot(secondRow, 7, new Pawn(color));
-
     }
 
 
