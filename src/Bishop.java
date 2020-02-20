@@ -4,5 +4,18 @@ public class Bishop extends Piece
     {
         super(color, Board.BISHOP);
     }
+
+    @Override
+    public String toString()
+    {
+        if (this.getColor() == 1)
+        {
+            return "WB";
+        }
+        else
+        {
+            return "BB";
+        }
+    }
     
 }

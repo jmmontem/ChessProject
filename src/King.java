@@ -6,4 +6,17 @@ public class King extends Piece
         super(color, Board.KING);
     }
     
+    @Override
+    public String toString()
+    {
+        if (this.getColor() == 1)
+        {
+            return "WK";
+        }
+        else
+        {
+            return "BK";
+        }
+    }
+    
 }

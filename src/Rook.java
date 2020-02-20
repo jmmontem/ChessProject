@@ -6,4 +6,16 @@ public class Rook extends Piece
         super(color, Board.ROOK);
     }
     
+    @Override
+    public String toString()
+    {
+        if (this.getColor() == 1)
+        {
+            return "WR";
+        }
+        else
+        {
+            return "BR";
+        }
+    }
 }

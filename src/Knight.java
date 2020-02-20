@@ -4,5 +4,18 @@ public class Knight extends Piece
     {
         super(color, Board.KNIGHT);
     }
+
+    @Override
+    public String toString()
+    {
+        if (this.getColor() == 1)
+        {
+            return "WK";
+        }
+        else
+        {
+            return "BK";
+        }
+    }
     
 }
