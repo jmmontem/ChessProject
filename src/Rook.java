@@ -3,7 +3,7 @@ public class Rook extends Piece
 
     public Rook(int color)
     {
-        super(color, Board.ROOK);
+        super(color, 2);
     }
     
     @Override

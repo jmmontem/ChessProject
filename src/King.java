@@ -3,7 +3,7 @@ public class King extends Piece
 
     public King(int color)
     {
-        super(color, Board.KING);
+        super(color, 6);
     }
     
     @Override

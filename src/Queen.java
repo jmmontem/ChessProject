@@ -2,7 +2,7 @@ public class Queen extends Piece
 {
     public Queen(int color)
     {
-        super(color, Board.QUEEN);
+        super(color, 5);
     }
     
     @Override

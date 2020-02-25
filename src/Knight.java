@@ -2,7 +2,7 @@ public class Knight extends Piece
 {
     public Knight(int color)
     {
-        super(color, Board.KNIGHT);
+        super(color, 3);
     }
 
     @Override

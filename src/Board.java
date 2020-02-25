@@ -5,19 +5,10 @@ public class Board
     {
         Board x = new Board();
         System.out.println(x.toString());
+        Piece test = x.board[6][3].getPiece();
+        test.canMove(x, x.board[1][3], 4, 3);
 
     }
-
-    public static final int  WHITE = 1;
-    public static final int BLACK = 2;
-
-    public static final int  NONE = 0;
-    public static final int  PAWN = 1;
-    public static final int  ROOK = 2;
-    public static final int  KNIGHT = 3;
-    public static final int  BISHOP = 4;
-    public static final int  QUEEN = 5;
-    public static final int  KING = 6;
 
     PieceSpot[][] board;
 
@@ -78,10 +69,10 @@ public class Board
 
     private void setBoard()
     {
-        // Black
-        this.setPieces(0, 1, BLACK);
-        // White
-        this.setPieces(7, 6, WHITE);
+        // Black             // Color Black = 2
+        this.setPieces(0, 1, 2);
+        // White             // Color White = 1
+        this.setPieces(7, 6, 1);
     }
 
     private void setPieces(int firstRow, int secondRow, int color)

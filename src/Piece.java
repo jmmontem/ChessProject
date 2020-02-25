@@ -54,5 +54,10 @@ public abstract class Piece
     {
         this.pieceID = idNum;
     }
+    
+    public boolean canMove(Board board, PieceSpot myPiece, int rowMove, int colMove)
+    {
+        return true;
+    }
 
 }

@@ -2,7 +2,7 @@ public class Bishop extends Piece
 {
     public Bishop(int color)
     {
-        super(color, Board.BISHOP);
+        super(color, 4);
     }
 
     @Override
