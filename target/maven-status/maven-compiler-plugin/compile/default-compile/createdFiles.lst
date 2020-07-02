@@ -1,0 +1,7 @@
+Chess.class
+BoardPiece$Color.class
+GameBoard.class
+BoardPiece.class
+BoardPiece$PieceID.class
+King.class
+Pawn.class
