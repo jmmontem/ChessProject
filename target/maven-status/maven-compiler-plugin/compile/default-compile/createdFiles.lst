@@ -1,7 +1,12 @@
+Queen.class
+Bishop.class
 Chess.class
-BoardPiece$Color.class
+Enum$Color.class
+Enum.class
 GameBoard.class
+Rook.class
 BoardPiece.class
-BoardPiece$PieceID.class
+Enum$PieceID.class
 King.class
 Pawn.class
+Knight.class

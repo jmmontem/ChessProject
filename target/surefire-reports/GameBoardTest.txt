@@ -1,4 +1,33 @@
 -------------------------------------------------------------------------------
 Test set: GameBoardTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec <<< FAILURE!
+GameBoardTest.testToString()  Time elapsed: 0.016 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <
+1  00  00  00  00  00  00  00  00  
+2  BP  BP  BP  BP  BP  BP  BP  BP  
+3  00  00  00  00  00  00  00  00  
+4  00  00  00  00  00  00  00  00  
+5  00  00  00  00  00  00  00  00  
+6  00  00  00  00  00  00  00  00  
+7  WP  WP  WP  WP  WP  WP  WP  WP  
+8  00  00  00  00  00  00  00  00  
+   A   B   C   D   E   F   G   H
+> but was: <
+1  BR  Bk  BB  BQ  BK  BB  Bk  BR  
+2  BP  BP  BP  BP  BP  BP  BP  BP  
+3  00  00  00  00  00  00  00  00  
+4  00  00  BR  00  00  00  00  00  
+5  00  00  00  00  00  00  00  00  
+6  00  00  00  00  WK  00  00  00  
+7  WP  WP  WP  WP  WP  WP  WP  WP  
+8  WR  Wk  WB  WQ  WK  WB  Wk  WR  
+   A   B   C   D   E   F   G   H
+>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:54)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:195)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:184)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:179)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:508)
+	at GameBoardTest.testToString(GameBoardTest.java:32)
+

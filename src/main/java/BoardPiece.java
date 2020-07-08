@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class BoardPiece {
     
     private int pieceRow;
@@ -5,8 +7,8 @@ public class BoardPiece {
     private boolean isAlive;
     private final Enum.Color color;
     private final Enum.PieceID id;
-
-
+    
+    
     public BoardPiece(int row, int col) {
         this.pieceRow = row;
         this.pieceCol = col;
@@ -59,5 +61,9 @@ public class BoardPiece {
     public Enum.PieceID getPieceID() {
         return id;
     }
-   
+    
+    public boolean canCheck(int kingRow, int kingCol, BoardPiece[][] gameBoard) {
+        return false;
+    }
+    
 }
