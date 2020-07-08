@@ -88,10 +88,10 @@ public class GameBoard  {
             System.out.println(whitePieces);
             
             
-            gameBoard[4][3] = new Rook(4, 3, Enum.Color.Black);
-//            gameBoard[5][3] = new Rook(5, 3, Enum.Color.White);
-            gameBoard[4][2] = new King(4, 2, Enum.Color.White, blackPieces);
-            System.out.println(gameBoard[4][3].canCheck(4, 7, gameBoard));
+            gameBoard[6][3] = new Queen(6, 3, Enum.Color.Black);
+//            gameBoard[5][4] = new Rook(5, 4, Enum.Color.White);
+            gameBoard[6][5] = new King(6, 5, Enum.Color.White, blackPieces);
+            System.out.println(gameBoard[6][3].canCheck(6, 5, gameBoard));
         }
         
 

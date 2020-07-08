@@ -29,6 +29,107 @@ public class Queen extends BoardPiece {
     
     @Override
     public boolean canCheck(int kingRow, int kingCol, BoardPiece[][] gameBoard) {
+        
+        int queenRow = this.getRow();
+        int queenCol = this.getCol();
+        
+        // Diagonal Right Down
+        int col = queenCol + 1;
+        for (int i = queenRow + 1; i <= 7; i++) {
+            if (gameBoard[i][col].getPieceID() == Enum.PieceID.King) {
+                return i == kingRow && col == kingCol;
+            }
+            else if (gameBoard[i][col].getPieceID() != Enum.PieceID.King && gameBoard[i][col].getPieceID() != Enum.PieceID.None) {
+                break;
+            }
+            
+            col++;
+        }
+        
+        // Diaogonal Left Up
+        col = queenCol - 1;
+        for (int i = queenRow - 1; i >= 0; i--) {
+            
+            if (gameBoard[i][col].getPieceID() == Enum.PieceID.King) {
+                return i == kingRow && col == kingCol;
+            }
+            else if (gameBoard[i][col].getPieceID() != Enum.PieceID.King && gameBoard[i][col].getPieceID() != Enum.PieceID.None) {
+                break;
+            }
+          
+            col--;
+        }
+        
+        // Diagonal Right Up
+        col = queenCol - 1;
+        for (int i = queenRow + 1; i <= 7; i++) {
+            
+            if (gameBoard[i][col].getPieceID() == Enum.PieceID.King) {
+                return i == kingRow && col == kingCol;
+            }
+            else if (gameBoard[i][col].getPieceID() != Enum.PieceID.King && gameBoard[i][col].getPieceID() != Enum.PieceID.None) {
+                break;
+            }
+          
+            col--;
+        }
+        
+        
+        // Diagonal Right Up
+        col = queenCol + 1;
+        for (int i = queenRow - 1; i >= 0; i--) {
+            
+            if (gameBoard[i][col].getPieceID() == Enum.PieceID.King) {
+                return i == kingRow && col == kingCol;
+            }
+            else if (gameBoard[i][col].getPieceID() != Enum.PieceID.King && gameBoard[i][col].getPieceID() != Enum.PieceID.None) {
+                break;
+            }
+          
+            col++;
+        }
+        
+       
+        // Check for left
+        for (int i = queenRow - 1; i >= 0; i--) {
+            if (gameBoard[i][queenCol].getPieceID() == Enum.PieceID.King) {
+                return i == kingRow && queenCol == kingCol;
+            }
+            else if (gameBoard[i][queenCol].getPieceID() != Enum.PieceID.King && gameBoard[i][queenCol].getPieceID() != Enum.PieceID.None) {
+                break;
+            }
+        }
+        
+        // Check for Right
+        for (int i = queenRow + 1; i <= 7; i++) {
+            if (gameBoard[i][queenCol].getPieceID() == Enum.PieceID.King) {
+                return i == kingRow && queenCol == kingCol;
+            }
+            else if (gameBoard[i][queenCol].getPieceID() != Enum.PieceID.King && gameBoard[i][queenCol].getPieceID() != Enum.PieceID.None) {
+                break;
+            }
+        }
+        
+        // Check for Down
+        for (int i = queenCol + 1; i <= 7; i++) {
+            if (gameBoard[queenRow][i].getPieceID() == Enum.PieceID.King) {
+                return queenRow == kingRow && i == kingCol;
+            }
+            else if (gameBoard[queenRow][i].getPieceID() != Enum.PieceID.King && gameBoard[queenRow][i].getPieceID() != Enum.PieceID.None) {
+                break;
+            }  
+        }
+        
+        // Check for Up
+        for (int i = queenCol - 1; i >= 0; i--) {
+            if (gameBoard[queenRow][i].getPieceID() == Enum.PieceID.King) {
+                return queenRow == kingRow && i == kingCol;
+            }
+            else if (gameBoard[queenRow][i].getPieceID() != Enum.PieceID.King && gameBoard[queenRow][i].getPieceID() != Enum.PieceID.None) {
+                break;
+            }  
+        }
+        
         return false;
     }
     
