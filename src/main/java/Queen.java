@@ -36,6 +36,10 @@ public class Queen extends BoardPiece {
         // Diagonal Right Down
         int col = queenCol + 1;
         for (int i = queenRow + 1; i <= 7; i++) {
+            if (col > 7) {
+                break;
+            }
+            
             if (gameBoard[i][col].getPieceID() == Enum.PieceID.King) {
                 return i == kingRow && col == kingCol;
             }
@@ -49,6 +53,9 @@ public class Queen extends BoardPiece {
         // Diaogonal Left Up
         col = queenCol - 1;
         for (int i = queenRow - 1; i >= 0; i--) {
+            if (col < 0) {
+                break;
+            }
             
             if (gameBoard[i][col].getPieceID() == Enum.PieceID.King) {
                 return i == kingRow && col == kingCol;
@@ -64,6 +71,10 @@ public class Queen extends BoardPiece {
         col = queenCol - 1;
         for (int i = queenRow + 1; i <= 7; i++) {
             
+            if (col < 0) {
+                break;
+            }
+            
             if (gameBoard[i][col].getPieceID() == Enum.PieceID.King) {
                 return i == kingRow && col == kingCol;
             }
@@ -78,6 +89,9 @@ public class Queen extends BoardPiece {
         // Diagonal Right Up
         col = queenCol + 1;
         for (int i = queenRow - 1; i >= 0; i--) {
+            if (col > 7) {
+                break;
+            }
             
             if (gameBoard[i][col].getPieceID() == Enum.PieceID.King) {
                 return i == kingRow && col == kingCol;

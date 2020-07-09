@@ -26,4 +26,16 @@ public class King extends BoardPiece {
     public boolean canCheck(int kingRow, int kingCol, BoardPiece[][] gameBoard) {
         return false;
     }
+    
+    
+    public ArrayList<BoardPiece> checkExist(BoardPiece[][] gameBoard) {
+        ArrayList<BoardPiece> allChecks = new ArrayList<>();
+        for (BoardPiece piece: checkPieces) {
+            if (piece.canCheck(this.getRow(), this.getCol(), gameBoard)) {
+                allChecks.add(piece);
+            }
+        }
+        
+        return allChecks;
+    }
 }
