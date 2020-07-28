@@ -28,10 +28,11 @@ public class GameBoard  {
         
         // Inititalize GameBoard
         private void initGameBoard() {
-            // Construct Both Kings
+            // Construct Both Kings add white pieces array to black
             gameBoard[4][0] = new King(4, 0, Enum.Color.Black, whitePieces);
             blackPieces.add(gameBoard[4][0]);
             
+            // add black pieces array to white
             gameBoard[4][7] = new King(4, 7, Enum.Color.White, blackPieces);
             whitePieces.add(gameBoard[4][7]);
            
@@ -84,11 +85,16 @@ public class GameBoard  {
             gameBoard[7][7] = new Rook(7, 7, Enum.Color.White);
             whitePieces.add(gameBoard[7][7]);
             
+            gameBoard[4][4] = new King(4, 4, Enum.Color.White, whitePieces);
+            gameBoard[3][3] = new King(3, 3, Enum.Color.Black, blackPieces);
             
-            King blackKing = (King) gameBoard[4][0];
-            System.out.println(blackKing.checkExist(gameBoard));
-            King whiteKing = (King) gameBoard[4][7];
-            System.out.println(whiteKing.checkExist(gameBoard));
+            System.out.println(gameBoard[4][4].canCheck(3, 3, gameBoard));
+            
+            
+//            King blackKing = (King) gameBoard[4][0];
+//            System.out.println(blackKing.checkExist(gameBoard));
+//            King whiteKing = (King) gameBoard[4][7];
+//            System.out.println(whiteKing.checkExist(gameBoard));
         }
         
 

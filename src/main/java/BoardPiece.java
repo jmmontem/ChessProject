@@ -66,4 +66,16 @@ public class BoardPiece {
         return false;
     }
     
+    
+    // Need the opposite King Piece
+    public boolean canMove(int newRow, int newCol, BoardPiece[][] gameBoard) {
+        return false;
+    }
+    
+    
+    // Check row and col boundery
+    public boolean checkRowCol(int row, int col) {
+        return (row >= 0 && row <= 7) && (col >= 0 && col <= 7);
+    }
+    
 }
